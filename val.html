@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Valentine</title>
+
+</head>
+
+<body>
+  <!-- First popup -->
+  <div id="firstPopup" class="popup active">
+    <div class="popup-content">
+      <div class="messcontainer">
+        <div class="envelope"></div>
+        <div class="card">
+          <h1 class="hellomessage">
+            WILL CHU BE MY VALENTINE?
+          </h1>
+          <div class="pikachu">
+            <div class="limbs"></div>
+            <div class="heart"></div>
+            <div class="arms"></div>
+            <div class="smile"></div>
+          </div>
+        </div>
+        <div class="cover"></div>
+        <div class="lid"></div>
+        <div class="shadow"></div>
+        <button id="firstPopupBtn">OK 🥰, Lets See</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Second popup -->
+  <div id="secondPopup" class="popup">
+    <div class="popup-content3">
+      <div class="valentines-day-card">
+
+        <input id="open" type="checkbox">
+        <label class="open" for="open"></label>
+        <div class="card-front">
+          <div class="note">Click to Open</div>
+        </div>
+        <button id="secondPopupBtn">OK</button>
+
+        <div class="card-inside">
+          <div class="text-one">Happy
+          </div>
+          <div class="hearter"></div>
+          <div class="smiler"></div>
+          <div class="eyeser"></div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Main container -->
+  <main class="container blur">
+    <img class="cat-img" src="img/cat-0.jpg" alt="Picture of a cat" />
+    <p class="title">Will you be my Valentine?</p>
+    <div class="buttons transition">
+      <button type="button" class="btn btn--yes transition">Yes</button>
+      <button type="button" class="btn btn--no transition">No</button>
+    </div>
+  </main>
+
+  <script type="module" src="script.js"></script>
+  <div id="thirdPopup" class="popup">
+    <div class="popup-content2">
+
+      <div class="paper myheart">
+
+      </div>
+
+
+      <div class="paper image">
+        <p> and I fallen in</p>
+        <p>Love with You 😍 </p>
+
+      </div>
+
+
+      <div class="paper image">
+        <p>How can be </p>
+        <p> someone so cute ❤️ </p>
+
+
+      </div>
+
+
+
+      <div class="paper red">
+        <p class="p1"> and My Favorite</p>
+        <p class="p2">Person 😍</p>
+      </div>
+
+      <div class="paper">
+        <p class="p1">You are Cute </p>
+        <p class="p1">Amazing <span style="color: red !important;">❤️</span></p>
+      </div>
+
+      <div class="paper">
+        <p class="p1">Drag the papers to move!</p>
+      </div>
+      <div style="position: fixed; bottom: 30px; right: 10px;"><a href="index.html"
+        style="text-decoration: none; font-size: x-large; padding: 10px; margin: 10px; background-color: rgb(0, 123, 255); color: white; border-radius: 8px; font-family: 'Poppins';">Create
+        Your Own</a></div>
+    </div>
+  </div>
+  <script>
+    // Function to load the appropriate script based on viewport width
+    function loadScript() {
+      var script = document.createElement('script');
+      script.id = 'dynamicScript';
+
+      if (window.innerWidth < 500) { // Change this width as per your mobile viewport
+        script.src = 'mobilescript.js';
+      } else {
+        script.src = 'paperscript.js';
+      }
+
+      // Remove previously loaded script if exists
+      var oldScript = document.getElementById('dynamicScript');
+      if (oldScript) {
+        oldScript.parentNode.removeChild(oldScript);
+      }
+
+      document.body.appendChild(script);
+    }
+
+    // Call the function when the page loads
+    window.onload = loadScript;
+
+    // Reload script when viewport size changes
+    window.addEventListener('resize', function () {
+      loadScript();
+    });
+  </script>
+</body>
+
+</html>

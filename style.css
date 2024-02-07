@@ -1,0 +1,812 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins&family=Single+Day&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Poppins&family=Single+Day&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+/* Styles for popups */
+.transition {
+  transition: font-size 0.3s ease;
+  /* Add transition for font-size */
+}
+
+.final-text {
+  font-family: 'Protest Riot', sans-serif;
+  font-size: 24px;
+  /* Set the font size */
+  text-align: center;
+  /* Align text to the center */
+}
+
+.final-wrapper {
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  font-family: Gamja Flower, sans-serif;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 9999;
+
+}
+
+.popup.active {
+  display: flex;
+}
+
+.popup-content {
+  background-color: #FFE3EC;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  text-align: center;
+  width: 100vw;
+  /* 80% of the viewport width */
+  height: 100vh;
+
+  /* Adjust height as needed */
+}
+
+.popup-content3 {
+
+  background-color: #FFE3EC;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  text-align: center;
+  width: 100vw;
+  /* 80% of the viewport width */
+  height: 100vh;
+
+  /* Adjust height as needed */
+}
+
+.popup-content2 {
+  font-family: 'Zeyada';
+
+  background-size: 1000px;
+
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  text-align: center;
+  width: 100vw;
+  /* 80% of the viewport width */
+  height: 100vh;
+
+  /* Adjust height as needed */
+}
+
+.popup-content2 p {
+  color: rgb(0, 0, 100);
+  opacity: 0.75;
+  user-select: none;
+}
+
+.container.blur {
+  filter: blur(20px);
+
+  /* Adjust the blur amount as needed */
+}
+
+html {
+  font-size: 70.5%;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: "Protest Riot", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Pangolin', cursive;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  font-family: Gamja Flower, sans-serif;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-img {
+  width: 30rem;
+  height: 30rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 3.6rem;
+  color: #f53699;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+.btn {
+  font-family: Gamja Flower, sans-serif;
+  padding: 1.5rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn--yes {
+  background-color: #00B400;
+}
+
+.btn--no {
+  background-color: #B40000;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+.messcontainer {
+  position: relative;
+  top: 0vmin;
+
+}
+
+.envelope {
+  position: relative;
+  background: #eb7885;
+  height: 30vmin;
+  width: 48vmin;
+}
+
+.card {
+  position: absolute;
+  background: white;
+  height: 25vmin;
+  width: 43vmin;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 2.5vmin;
+  top: 0vmin;
+
+  animation: slide-rev 0.2s ease-out;
+}
+
+.hellomessage {
+  position: absolute;
+  top: 5vmin;
+}
+
+.pikachu {
+  position: absolute;
+  background: #f9ebaa;
+  height: 8vmin;
+  width: 10vmin;
+  border-radius: 40%;
+  top: 15vmin;
+  display: flex;
+}
+
+.pikachu::before {
+  content: '';
+  position: absolute;
+  background: #f9ebaa;
+  height: 6vmin;
+  width: 9vmin;
+  border-radius: 90% 90% 60% 60%;
+  top: -4vmin;
+  left: 0.5vmin;
+}
+
+.pikachu::after {
+  content: '';
+  position: absolute;
+  background: transparent;
+  height: 1vmin;
+  width: 1vmin;
+  top: 2vmin;
+  left: -1.5vmin;
+  color: #4a4947;
+  border-radius: 50%;
+  box-shadow:
+    4vmin -3.5vmin, 8vmin -3.5vmin,
+    2vmin -2vmin #fad598, 10vmin -2vmin #fad598,
+    3vmin 5vmin #f9ebaa, 9.3vmin 5vmin #f9ebaa;
+}
+
+
+
+.smile {
+  position: relative;
+  background: transparent;
+  height: 1.1vmin;
+  width: 1vmin;
+  border-radius: 50%;
+  border-bottom: 0.3vmin solid #4a4947;
+  left: -4.5vmin;
+  top: -1.3vmin;
+}
+
+.popup-content button {
+  font-family: Gamja Flower, sans-serif;
+  display: block;
+  /* Change the button to a block-level element */
+  margin: 50px auto;
+  /* Center the button horizontally and add some vertical space */
+  background-color: #f53699;
+  /* Pink background color */
+  color: #fff;
+  /* White text color */
+  padding: 10px 20px;
+  /* Padding for better appearance */
+  border: none;
+  /* Remove border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  font-size: 1.99rem;
+}
+
+.popup-content3 button {
+  font-family: Gamja Flower, sans-serif;
+  display: block;
+  /* Change the button to a block-level element */
+  margin: 50px auto;
+  /* Center the button horizontally and add some vertical space */
+  background-color: #f53699;
+  /* Pink background color */
+  color: #fff;
+  /* White text color */
+  padding: 10px 20px;
+  /* Padding for better appearance */
+  border: none;
+  /* Remove border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  font-size: 1.99rem;
+}
+
+.popup-content button:hover {
+  background-color: #e7298a;
+  /* Darker pink on hover */
+}
+
+.smile::before {}
+
+.limbs {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 1vmin solid transparent;
+  border-right: 1vmin solid transparent;
+  border-bottom: 6vmin solid #f9ebaa;
+  border-radius: 80%;
+  top: -6vmin;
+  left: 1vmin;
+  transform: rotate(-20deg);
+}
+
+.limbs::before {
+  content: '';
+  position: absolute;
+  background: #f9ebaa;
+  width: 5vmin;
+  height: 2vmin;
+  border-radius: 40%;
+  top: 10vmin;
+  left: 4vmin;
+  box-shadow:
+    -1vmin 1.5vmin #f9ebaa;
+}
+
+.limbs::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 1vmin solid transparent;
+  border-right: 1vmin solid transparent;
+  border-bottom: 6vmin solid #f9ebaa;
+  border-radius: 80%;
+  top: 3vmin;
+  left: 5vmin;
+  transform: rotate(40deg);
+}
+
+.heart {
+  position: relative;
+  width: 5vmin;
+  height: 4vmin;
+  top: 2vmin;
+  left: 0.6vmin;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 2.5vmin;
+  top: 0;
+  width: 2.5vmin;
+  height: 4vmin;
+  background: #fc978b;
+  border-radius: 2.5vmin 2.5vmin 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.arms {
+  position: relative;
+  background: #f9ebaa;
+  width: 4.2vmin;
+  height: 2vmin;
+  border-radius: 60% 60% 90% 60% / 50% 50% 90% 90%;
+  top: 3vmin;
+  left: -5vmin;
+}
+
+.arms::after {
+  content: '';
+  position: absolute;
+  background: #f9ebaa;
+  width: 4vmin;
+  height: 2vmin;
+  border-radius: 60% 60% 90% 60% / 50% 50% 90% 90%;
+  left: 5vmin;
+  top: 0vmin;
+}
+
+.cover {
+  position: absolute;
+  height: 0;
+  width: 0;
+
+  border-bottom: 15vmin solid #f5b5bb;
+  border-left: 24vmin solid transparent;
+  border-right: 24vmin solid transparent;
+  top: 15vmin;
+  z-index: 3;
+}
+
+.cover::after {
+  /*left triangle*/
+  position: absolute;
+  content: '';
+  border-left: 24.5vmin solid #ffbbc1;
+  border-bottom: 15vmin solid transparent;
+  border-top: 15vmin solid transparent;
+  top: -15vmin;
+  left: -24vmin;
+}
+
+.cover::before {
+  position: absolute;
+  content: '';
+  border-right: 24.5vmin solid #ffbbc1;
+  border-bottom: 15vmin solid transparent;
+  border-top: 15vmin solid transparent;
+  top: -15vmin;
+  left: -0.5vmin;
+}
+
+.lid {
+  position: absolute;
+  height: 0;
+  width: 0;
+
+  border-top: 15vmin solid #ff8896;
+  border-left: 24vmin solid transparent;
+  border-right: 24vmin solid transparent;
+
+  top: 0;
+  transform-origin: top;
+  animation: open-rev 2s;
+}
+
+.messcontainer:hover .lid {
+  animation: open 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.messcontainer:hover .card {
+  animation: slide 0.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.shadow {
+  position: relative;
+  top: 3vmin;
+  border-radius: 50%;
+  opacity: 0.7;
+  height: 2vmin;
+  width: 48vmin;
+  background: #e8c5d0;
+}
+
+@keyframes open {
+  100% {
+    transform: rotatex(180deg);
+  }
+}
+
+@keyframes slide {
+  100% {
+    transform: translatey(-15vmin);
+    z-index: 2;
+  }
+}
+
+@keyframes open-rev {
+  from {
+    transform: rotatex(-180deg);
+
+  }
+}
+
+@keyframes slide-rev {
+  from {
+    transform: translatey(-15vmin);
+  }
+}
+
+
+
+.paper {
+  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+  /*  min-width: 800px; */
+  font-size: 50px;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+
+  position: absolute;
+}
+
+
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.paper.myheart {
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  border-radius: 50%;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: center center;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .paper {
+    font-size: 28px;
+    /* Increase font size for mobile view */
+  }
+
+  .paper {
+    padding: 20px 50px;
+    /* Adjusted padding for mobile view */
+  }
+
+
+}
+
+
+
+input#open {
+  display: none;
+}
+
+.valentines-day-card {
+  position: relative;
+
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: .3s;
+}
+
+.card-front {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  position: relative;
+  background-color: #fff0f3;
+  width: 300px;
+  height: 300px;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .15), 30px 0 50px rgba(0, 0, 0, 0.3);
+  transition: .3s;
+}
+
+.card-front:before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background-color: #ff8896;
+  top: 10px;
+  left: 10px;
+}
+
+.card-inside {
+
+
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+
+}
+
+.open {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  z-index: 6;
+  cursor: pointer;
+}
+
+#open:checked~.card-front {
+  transform: rotateY(-155deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .13), 30px 0 50px rgba(0, 0, 0, 0.1);
+}
+
+#open:checked~.card-front:before {
+  z-index: 5;
+  background-color: #fff0f3;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  left: 0;
+}
+
+.note {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  background-color: #fff0f3;
+  top: 75px;
+  left: 50px;
+  color: #333;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+}
+
+.note:before,
+.note:after {
+  position: absolute;
+  content: "";
+  background-color: #ba1c1c;
+  width: 40px;
+  height: 40px;
+}
+
+.note:before {
+  transform: rotate(-45deg);
+  top: -20px;
+  left: 80px;
+}
+
+.note:after {
+  border-radius: 50%;
+  top: -35px;
+  left: 65px;
+  box-shadow: 30px 0 #ba1c1c;
+}
+
+
+.text-one {
+  position: absolute;
+  color: #333;
+
+
+  font-family: 'Mochiy Pop P One', sans-serif;
+  font-size: 12px;
+  top: 30px;
+  width: 300px;
+  text-align: center;
+}
+
+/* .text-one:before,
+.text-one:after {
+  position: absolute;
+  left: 5px;
+  text-align: center;
+  width: 300px;
+} */
+/* 
+.text-one:before {
+  content: "Valentine's";
+  top: 30px;
+  color: #d04e4e;
+}
+
+.text-one:after {
+  content: "day!";
+  top: 60px;
+} */
+
+.hearter {
+  position: relative;
+  background-color: #d04e4e;
+  height: 60px;
+  width: 60px;
+  top: 180px;
+  left: 120px;
+  transform: rotate(-45deg);
+  animation: .8s beat infinite;
+}
+
+.hearter:before,
+.hearter:after {
+  content: "";
+  background-color: #d04e4e;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+}
+
+.hearter:before {
+  top: -30px;
+  left: 0;
+}
+
+.hearter:after {
+  left: 30px;
+  top: 0;
+}
+
+.smiler {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  background-color: #333;
+  z-index: 1;
+  border-radius: 0 0 100px 100px;
+  top: 200px;
+  left: 135px;
+  overflow: hidden;
+}
+
+.smiler:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #030202;
+  top: 5px;
+  left: 5px;
+}
+
+.eyeser {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #333;
+  width: 10px;
+  height: 10px;
+  z-index: 1;
+  top: 190px;
+  left: 165px;
+  box-shadow: -40px 0 #333;
+  transform-origin: 50%;
+  animation: close 2s infinite;
+}
+
+@keyframes close {
+
+  0%,
+  100% {
+    transform: scale(1, .05);
+  }
+
+  5%,
+  95% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes beat {
+
+  0%,
+  40%,
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+
+  25%,
+  60% {
+    transform: scale(1.1) rotate(-45deg);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .pikachu {
+    display: none;
+
+  }
+
+  .hellomessage {
+    position: top;
+    top: 0vmin;
+  }
+}
